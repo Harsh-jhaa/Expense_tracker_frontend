@@ -7,9 +7,9 @@ import Income from './pages/Dashboard/Income.jsx';
 import Expense from './pages/Dashboard/Expense.jsx';
 import AuthLayout from './components/layouts/AuthLayout.jsx';
 import './index.css';
-import User from '../../backEnd/models/User.js';
+// import User from '../../backEnd/models/User.js';
 import { UserProvider } from './context/UserContext.jsx';
-import {Toaster} from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 const App = () => {
   return (
     <BrowserRouter>
@@ -23,15 +23,14 @@ const App = () => {
           <Route path='/expense' element={<Expense />} />
         </Routes>
 
-      <Toaster 
-        toastOptions={{
-          className: '',
-          style:{
-            fontSize: '13px'
-          },
-        }}
-      />
-
+        <Toaster
+          toastOptions={{
+            className: '',
+            style: {
+              fontSize: '13px',
+            },
+          }}
+        />
       </UserProvider>
     </BrowserRouter>
   );
